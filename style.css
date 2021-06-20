@@ -2,5 +2,126 @@
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
+.container{
+	width: 100vw;
+	height: fit-content;
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 10vh;
+}
+
+.nav-header{
+	height: 10vh;
+	width: fit-content;
+	display: flex; 
+	font-size: 1.5em;
+	align-items: center;
+}
+
+.logo{
+	height: 80%;
+	margin: 5px;
+}
+
+.controls{
+	display: flex;
+}
+
+.nav{
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 30px;
+	font-size: 1.2em;
+	color: black;
+	border-bottom: solid white 5px;
+}
+
+.nav:hover{
+	background: rgb(238, 237, 237);
+	border-bottom: solid rgb(0, 74, 235) 5px;
+}
+
+.nav-home{
+	border-bottom: solid rgb(0, 74, 235) 5px;
+}
+
+.body{
+	height: fit-content;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.left, .right{
+	height: 90vh;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.left{
+	color: rgb(255, 245, 245);
+	background: rgb(0, 74, 235);
+	font-size: 3em;
+	text-align: center;
+}
+
+.right{
+	background: rgb(255, 255, 87);
+}
+
+.left .image img{
+	height: 50vh;
+	margin: 35px;
+}
+
+.right .image img{
+	height: 30vh;
+	margin: 35px;
+	padding-left: 45px;
+}
+
+.right .button{
+	text-decoration: none;
+}
+
+.button{
+	font-weight: bold;
+	border-radius: 7px;
+	padding: 15px 30px;
+	margin: 20px;
+}
+
+.signup-button{
+	background-color: rgb(17, 41, 255);
+	color: white;
+}
+
+.signup-button:hover{
+	background-color: rgba(7, 3, 245, 0.850);;
+}
+
+.signin-button{
+	color: black;
+	background-color: white;
+	padding: 12px 30px;
+	border: solid rgb(146, 146, 146) 1px;
+}
+
+.signin-button:hover{
+	background-color: rgba(255, 255, 255, 0.850);
+}
