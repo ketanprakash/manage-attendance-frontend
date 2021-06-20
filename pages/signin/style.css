@@ -1,0 +1,115 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container{
+	width: 100vw;
+	height: fit-content;
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 10vh;
+}
+
+.nav-header{
+	height: 10vh;
+	width: fit-content;
+	display: flex; 
+	font-size: 1.5em;
+	align-items: center;
+}
+
+.logo{
+	height: 80%;
+	margin: 5px;
+}
+
+.controls{
+	display: flex;
+}
+
+.nav{
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 30px;
+	font-size: 1.2em;
+	color: black;
+	border-bottom: solid white 5px;
+}
+
+.nav:hover{
+	background: rgb(238, 237, 237);
+	border-bottom: solid rgb(0, 74, 235) 5px;
+}
+
+.nav-signin{
+	border-bottom: solid rgb(0, 74, 235) 5px;
+}
+
+.body{
+    background: rgb(255, 255, 87);
+	height: 90vh;
+    width: 100vw;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-form{
+    background: white;
+    width: 400px;
+    height: 500px;
+    border: solid gray 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-image{
+    height: 150px;
+    margin: 20px;
+}
+.field{
+    margin: 20px;
+    padding: 10px;
+    width: 300px;
+    font-size: 1.2em;
+    outline: none;
+    border: 0px;
+    background-color: rgb(248, 248, 248);
+    border: solid white 2px;
+}
+
+.field:focus{
+    border-bottom: solid gray 2px;
+}
+
+.signin-button{
+    padding: 13px;
+    margin: 20px;
+    width: 110px;
+    border-radius: 4px;
+    border: 0px;
+    background:rgb(0, 74, 235);
+    color: white;
+    font-size: 1.05em;
+}
+
+.signin-button:hover{
+    cursor: pointer;
+    background:rgba(0, 74, 235, 0.850)
+}
