@@ -76,7 +76,7 @@ a {
 }
 
 .invisible{
-    transform: scale(0);
+    display: none;
 }
 
 .subject-add{
@@ -115,6 +115,10 @@ a {
 	border-bottom: solid rgb(0, 74, 235) 5px;
 }
 
+.nav-logout{
+    cursor: pointer;
+}
+
 .body{
     background: rgb(255, 255, 87);
 	height: 90vh;
@@ -138,17 +142,37 @@ a {
     display: none;
 }
 
+.subject-container-empty{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5em;
+    color: rgb(61, 61, 61);
+}
+
 .subject-card{
-    background: rgb(0, 74, 235);
-    height: 100px;
+    background: white;
+    height: 200px;
     width: 200px;
     margin: 20px;
-    border-radius: 10px;
-    border: solid gray 2px;
+    border: solid black 1px;
+}
+
+.subject-card img {
+    height: 30px;
+    transform: translate(160px, 80px);
+    cursor: pointer;
+}
+
+.subject-heading {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;
+    text-align: center;
+    background: rgb(0, 74, 235);
+    border-bottom: solid black 2px;
+    width: 100%;
+    height: 80px; 
 }
 
 .subject-card a{
