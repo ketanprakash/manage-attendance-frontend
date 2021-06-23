@@ -19,6 +19,7 @@ a {
 	align-items: center;
 	justify-content: space-between;
 	height: 10vh;
+    border-bottom: solid rgb(121, 119, 119) 1px;
 }
 
 .nav-header{
@@ -71,12 +72,12 @@ a {
     background: rgb(255, 255, 106);
     width: 500px;
     height: 600px;
-    border: solid gray 1px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
 }
 
 .form-image{

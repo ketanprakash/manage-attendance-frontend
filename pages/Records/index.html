@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/calendar1.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <!-- taken from https://developers.google.com/chart/interactive/docs/gallery/piechart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src = "chart.js"></script>
+    <title>Attendance Management System</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="nav-header">
+                <img class = "logo" src="../../assets/Calendar.svg">
+                <div class="heading"></div>
+            </div>
+            <div class="controls">
+                <div class="nav-form-add invisible">
+                    <form class="subject-add">
+                        <input type="text" placeholder="Subject" class="subject-field">
+                        <button
+                        class="add-subject-button">Add Subject</button>
+                    </form>
+                </div>
+                <a href='../../pages/Dashboard/index.html'><div class="nav nav-dashboard">Dashboard</div></a>
+                <div class="nav nav-logout">Logout</div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="left">
+                <div class="attendance-card">
+                    2021-06-22
+                    <div class="attendance holiday">Holiday</div>
+                </div>
+                <div class="attendance-card">
+                    2021-06-21
+                    <div class="attendance present">Present</div>
+                </div>
+                <div class="attendance-card">
+                    2021-06-20
+                    <div class="attendance absent">Absent</div>
+                </div>
+                <div class="attendance-card">
+                    2021-06-20
+                    <div class="attendance absent">Absent</div>
+                </div>
+                <div class="attendance-card">
+                    2021-06-20
+                    <div class="attendance absent">Absent</div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="piechart" style="width: 100%; height: 60%;"></div>
+                <div class="right-bottom">Type me to find out how many words per minute you can type</div>
+            </div>
+        </div>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
