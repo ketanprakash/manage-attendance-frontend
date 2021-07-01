@@ -1,4 +1,5 @@
-const url = 'http://localhost:8000';
+// const url = 'http://localhost:8000';
+const url = 'https://manageattendance.herokuapp.com';
 const navHeading = document.querySelector('.heading');
 const logout = document.querySelector('.nav-logout');
 
