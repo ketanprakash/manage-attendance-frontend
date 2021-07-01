@@ -161,14 +161,14 @@ a {
     padding: 5px;
 }
 
-.present{
+.Present{
     background: rgb(3, 255, 3);
 }
 
-.absent{
+.Absent{
     background: red;
 }
 
-.holiday{
+.Holiday{
     background: rgb(0, 140, 255);
 }

@@ -146,27 +146,28 @@ a {
     align-items: center;
     text-align: center;
     font-size: 2.5em;
+    border: solid rgb(61, 61, 61) 1px;
     color: rgb(61, 61, 61);
 }
 
 .subject-card{
     background: rgb(250, 250, 250);
-    height: 280px;
-    width: 280px;
+    height: 250px;
+    width: 250px;
     margin: 20px 20px;
     border-radius: 10px;
     font-size: 1.2em;
-    border: solid rgb(150, 150, 150) 1px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 
 .subject-card:hover{
+    cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
 }
 
 .delete-image {
     height: 30px;
-    transform: translate(230px, 130px);
+    transform: translate(210px, 105px);
     cursor: pointer;
 }
 
@@ -175,8 +176,7 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgb(0, 74, 235);
-    background: solid black 1px;
+    background: rgb(9, 64, 216);
     width: 100%;
     height: 100px; 
     border-top-left-radius: 10px;
