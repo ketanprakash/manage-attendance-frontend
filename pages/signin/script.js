@@ -1,5 +1,5 @@
-// const url = "http://localhost:8000";
-const url = 'https://manageattendance.herokuapp.com';
+const url = "http://localhost:8000";
+// const url = 'https://manageattendance.herokuapp.com';
 const signinButton = document.querySelector('.signin-button');
 const emailField = document.querySelector('.email-field');
 const passwordField = document.querySelector('.password-field');

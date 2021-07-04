@@ -1,5 +1,5 @@
-// const url = 'http://localhost:8000';
-const url = 'https://manageattendance.herokuapp.com';
+const url = 'http://localhost:8000';
+// const url = 'https://manageattendance.herokuapp.com';
 const navAdd = document.querySelector('.nav-add');
 const AddForm = document.querySelector('.nav-form-add');
 const AddSubjectButton = document.querySelector('.add-subject-button');

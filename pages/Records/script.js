@@ -1,5 +1,5 @@
-// const url = 'http://localhost:8000';
-const url = 'https://manageattendance.herokuapp.com';
+const url = 'http://localhost:8000';
+// const url = 'https://manageattendance.herokuapp.com';
 const navHeading = document.querySelector('.heading');
 const logout = document.querySelector('.nav-logout');
 
@@ -79,7 +79,7 @@ const getRecords = () => {
                 editAttendenceOptions.classList.remove("Absent");
                 editAttendenceOptions.classList.add(dayType);
                 editButton.addEventListener('click', (event) => {
-                    editAttendanceForm.classList.remove('invisible');
+                    editAttendanceForm.classList.toggle('invisible');
                 })
                 editAttendenceOptions.addEventListener('change', (event) => {
                     editAttendenceOptions.classList.remove('Present');
