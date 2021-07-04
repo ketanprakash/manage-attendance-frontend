@@ -55,62 +55,7 @@ a {
 	border-bottom: solid rgb(0, 74, 235) 5px;
 }
 
-.nav-add{
-    border: 0px;
-    padding: 5px;
-}
 
-.nav-add:hover{
-    border: 0px;
-    cursor: pointer;
-}
-
-.nav-form-add{
-    border: solid black 1px;
-    height: 10vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0px 5px;
-	font-size: 1.2em;
-	color: black;
-}
-
-.invisible{
-    display: none;
-}
-
-.subject-add{
-    display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.subject-field{
-    outline: none;
-    border: 0px;
-    padding: 10px;
-    margin: 5px;
-    background: rgb(250, 250, 250);
-}
-
-.subject-field:focus{
-    border-bottom: solid black 1px;
-}
-
-.add-subject-button{
-    padding: 10px;
-    background: rgb(0, 74, 235);
-    border-radius: 5px;
-    color: white;
-    outline: none;
-    border: 0px;
-}
-
-.add-subject-button:hover{
-    background: rgb(0, 74, 235, 0.850);
-    cursor: pointer;
-}
 
 .nav-logout{
     cursor: pointer;
@@ -125,23 +70,59 @@ a {
 .left{
     padding: 20px;
     height: 90vh;
-    width: 35vw;
-    background: blue;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
+    background: rgb(255, 255, 87);
+}
+
+.left::-webkit-scrollbar {
+    display: none;
 }
 
 .right{
     height: 90vh;
-    width: 65vw;
-    background: red;
+    width: 70vw;
 }
 
-.right-bottom{
-    padding: 20px;
+.mark-attendance-form{
+    background: white;
+    height: 250px;
+    width: 300px;
+    border-radius: 15px;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+.attendance-option{
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.mark-attendance-button{
+    padding: 10px 25px;
+    background-color: rgb(0, 38, 255);
+    color: white;
+    border: 0px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+.mark-attendance-button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 38, 255, 0.850);
 }
 
 .attendance-card{
@@ -153,11 +134,12 @@ a {
     text-align: center;
     font-size: 1.3em;
     padding: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 
 .attendance{
-    transform: translate(50px, 20px);
-    width: 150px;
+    transform: translate(70px, 20px);
+    width: 120px;
     padding: 5px;
 }
 
@@ -171,4 +153,42 @@ a {
 
 .Holiday{
     background: rgb(0, 140, 255);
+    color: white;
+}
+
+.edit-button{
+    transform: translate(-90px, -14px);
+    height: 30px;
+}
+
+.edit-button{
+    cursor: pointer;
+}
+
+.edit-attendance-options{
+    transform: translate(50px, -85px);
+    font-size: 1em;
+    border: 0px;
+    outline: none;
+    width: 120px;
+    padding: 5px;
+    border: solid 1px black;
+}
+
+.edit-attendance-button{
+    transform: translate(-50px, -50px);
+    padding: 8px;
+    background:rgb(0, 38, 255);
+    color: white;
+    border: 0px;
+    border-radius: 2px;
+}
+
+.edit-attendance-button:hover{
+    cursor: pointer;
+    background:rgb(0, 38, 255, 0.850);
+}
+
+.invisible{
+    display: none;
 }

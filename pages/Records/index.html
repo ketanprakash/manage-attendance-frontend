@@ -18,28 +18,40 @@
                 <div class="heading"></div>
             </div>
             <div class="controls">
-                <div class="nav-form-add invisible">
-                    <form class="subject-add">
-                        <input type="text" placeholder="Subject" class="subject-field">
-                        <button
-                        class="add-subject-button">Add Subject</button>
-                    </form>
-                </div>
                 <a href='../../pages/Dashboard/index.html'><div class="nav nav-dashboard">Dashboard</div></a>
                 <div class="nav nav-logout">Logout</div>
             </div>
         </div>
         <div class="body">
             <div class="left">
+                <form class = "mark-attendance-form invisible"> 
+                    Today's Attendance
+                    <select class = "attendance-option Present"> 
+                        <option value = "Present">Present</option>
+                        <option value = "Absent">Absent</option>
+                        <option value = "Holiday">Holiday</option>
+                    </select>
+                    <button class = "mark-attendance-button">Mark</button>
+                </form>
                 <!-- dummy attendance card: -->
-                <!-- <div class="attendance-card">
-                    2021-06-22
-                    <div class="attendance holiday">Holiday</div>
-                </div> -->
+                
             </div>
+            <!-- <div class="attendance-card">
+                2021-06-22
+                <div class="attendance holiday">Holiday</div>
+                <img class = "edit-button" src="../../assets/edit-button.png">
+                <form class = "edit-attendance-form">
+                    <button class = "edit-attendance-button">Edit</button>
+                    <select class = "edit-attendance-options Present">
+                        <option value="Present">Present</option>
+                        <option value="Absent">Absent</option>
+                        <option value="Holiday">Holiday</option>
+                    </select> 
+                </form>
+            </div> -->
             <div class="right">
-                <div id="piechart" style="width: 100%; height: 70%;"></div>
-                <div class="right-bottom">Type me to find out how many words per minute you can type</div>
+                <div id="piechart" style="width: 100%; height: 99%;">
+                </div>
             </div>
         </div>
     </div>

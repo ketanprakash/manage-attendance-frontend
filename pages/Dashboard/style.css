@@ -66,7 +66,6 @@ a {
 }
 
 .nav-form-add{
-    border: solid black 1px;
     height: 10vh;
 	display: flex;
 	justify-content: center;
@@ -74,6 +73,10 @@ a {
 	padding: 0px 5px;
 	font-size: 1.2em;
 	color: black;
+    transform: translate(55px, 70px);
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+
 }
 
 .invisible{
