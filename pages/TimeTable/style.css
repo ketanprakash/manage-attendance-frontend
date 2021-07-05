@@ -1,0 +1,107 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container{
+	width: 100vw;
+	height: fit-content;
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 10vh;
+    border-bottom: solid rgb(121, 119, 119) 1px;
+}
+
+.nav-header{
+	height: 10vh;
+	width: fit-content;
+	display: flex; 
+	font-size: 1.5em;
+	align-items: center;
+}
+
+.logo{
+	height: 80%;
+	margin: 5px;
+}
+
+.controls{
+	display: flex;
+}
+
+.nav{
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 30px;
+	font-size: 1.2em;
+	color: black;
+	border-bottom: solid white 5px;
+}
+
+.nav:hover{
+	background: rgb(238, 237, 237);
+	border-bottom: solid rgb(0, 74, 235) 5px;
+}
+
+.nav-time-table{
+    cursor: pointer;
+	border-bottom: solid rgb(0, 74, 235) 5px;
+}
+
+.nav-add{
+    border: 0px;
+    padding: 5px;
+}
+
+.nav-add:hover{
+    border: 0px;
+    cursor: pointer;
+}
+
+.body{
+    display: flex;
+    height: 90vh;
+    justify-content: center; 
+    align-items: center;
+}
+
+table, th, td{
+    border: solid black 1px;
+    font-size: 1.1em;
+}
+
+table{
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+th, td{
+    padding: 13px;
+}
+
+.set-time-table{
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: 0px;
+    background: rgb(14, 14, 241);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(22, 8, 223, 0.2), 0 6px 20px 0 rgba(22, 8, 223, 0.1);
+}
+
+.set-time-table:hover{
+    background: rgba(14, 14, 241, 0.850);
+}

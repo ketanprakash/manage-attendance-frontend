@@ -24,6 +24,11 @@ attendanceOption.addEventListener('change', (event) => {
     attendanceOption.classList.add(attendanceOption.value);
 });
 
+const navRecords = document.querySelector(".nav-record");
+navRecords.addEventListener('click', (event) => {
+    location.reload();
+})
+
 const getRecords = () => {
     fetch(`${url}/attendance/getsubjectdata/${subjectId}`, {
         method: "GET", 
@@ -57,7 +62,7 @@ const getRecords = () => {
                 card.classList.add('attendance-card');
                 card.innerHTML = `${element.date} <div id = ${element.id} class="attendance ${dayType}">${dayType}</div><img class = "edit-button" src="../../assets/edit-button.png">
                 <form class = "edit-attendance-form invisible">
-                    <button class = "edit-attendance-button">Edit</button>
+                    <button class = "edit-attendance-button">Done</button>
                     <select class = "edit-attendance-options Present">
                         <option value="Present">Present</option>
                         <option value="Absent">Absent</option>

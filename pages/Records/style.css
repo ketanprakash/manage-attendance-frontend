@@ -9,6 +9,9 @@ a {
 	text-decoration: none;
 }
 
+body{
+    overflow: hidden;
+}
 .container{
 	width: 100vw;
 	height: fit-content;
@@ -55,9 +58,11 @@ a {
 	border-bottom: solid rgb(0, 74, 235) 5px;
 }
 
+.nav-record{
+	border-bottom: solid rgb(0, 74, 235) 5px;
+}
 
-
-.nav-logout{
+.nav-logout, .nav-record{
     cursor: pointer;
 }
 
@@ -70,7 +75,7 @@ a {
 .left{
     padding: 20px;
     height: 90vh;
-    width: 30vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +90,7 @@ a {
 
 .right{
     height: 90vh;
-    width: 70vw;
+    width: 60vw;
 }
 
 .mark-attendance-form{
