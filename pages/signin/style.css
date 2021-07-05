@@ -20,7 +20,11 @@ a {
 	justify-content: space-between;
 	height: 10vh;
     border-bottom: solid rgb(121, 119, 119) 1px;
+	position: sticky; 
+	top: 0px;
+	background: white;
 }
+
 
 .nav-header{
 	height: 10vh;
@@ -71,22 +75,23 @@ a {
 .signin-form{
     background: white;
     width: 400px;
+	max-width: 90%;
+	max-height: 90%;
     height: 500px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
 .form-image{
+	max-height: 29%;
     height: 150px;
-    margin: 20px;
 }
 
 .field{
-    margin: 20px;
     padding: 10px;
     width: 300px;
     font-size: 1.2em;
@@ -102,8 +107,8 @@ a {
 
 .signin-button{
     padding: 13px;
-    margin: 20px;
     width: 110px;
+	max-width: 30%;
     border-radius: 4px;
     border: 0px;
     background:rgb(0, 74, 235);
@@ -114,4 +119,35 @@ a {
 .signin-button:hover{
     cursor: pointer;
     background:rgba(0, 74, 235, 0.850)
+}
+
+@media only screen and (max-width: 600px){
+	body{
+		overflow-x: hidden;
+	}
+	.navbar{
+		height: 7vh;
+	}
+	.nav-header{
+		height: 7vh;
+	}
+	.logo{
+		height: 5vh;
+		padding: 2px;
+	}
+	.body{
+        height: 93vh;
+    }
+	.nav{
+		font-size: 10px;
+		padding: 10px;
+		height: 7vh;
+	}
+	.signin-form{
+		box-shadow: none;
+		border-radius: 0px;
+		height: 100%;
+		max-height: 100%;
+		max-width: 100%;
+	}
 }

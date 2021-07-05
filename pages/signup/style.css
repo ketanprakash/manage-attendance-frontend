@@ -20,6 +20,9 @@ a {
 	justify-content: space-between;
 	height: 10vh;
     border-bottom: solid rgb(121, 119, 119) 1px;
+    position: sticky; 
+	top: 0px;
+	background: white;
 }
 
 .nav-header{
@@ -71,6 +74,8 @@ a {
 .signup-form{
     background: rgb(255, 255, 106);
     width: 500px;
+    max-width: 90%;
+    max-height: 90%;
     height: 600px;
     border-radius: 10px;
     display: flex;
@@ -121,3 +126,53 @@ a {
     cursor: pointer;
     background:rgb(199, 199, 199)
 }
+
+@media only screen and (max-width: 600px){
+	body{
+		overflow-x: hidden;
+	}
+    .nav-header{
+		height: 7vh;
+	}
+    .body{
+        height: 93vh;
+    }
+	.navbar{
+		height: 7vh;
+	}
+	.logo{
+		height: 5vh;
+		padding: 2px;
+	}
+	.nav{
+		font-size: 10px;
+		padding: 10px;
+		height: 7vh;
+	}
+    html{
+        height: fit-content;
+    }
+	.signup-form{
+		box-shadow: none;
+		border-radius: 0px;
+		height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+	}
+
+    .field{
+        width: 80%;
+    }
+
+    .firstname-field, .lastname-field{
+        width: 40%;
+    }
+    .namedata{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+

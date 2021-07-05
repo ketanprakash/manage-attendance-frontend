@@ -1,11 +1,11 @@
-// const url = 'http://localhost:8000';
-const url = 'https://manageattendance.herokuapp.com';
+const url = 'http://localhost:8000';
+// const url = 'https://manageattendance.herokuapp.com';
 const navHeading = document.querySelector('.heading');
 const logout = document.querySelector('.nav-logout');
 
-window.addEventListener('resize', (event) => {
-    location.reload();
-})
+// window.addEventListener('resize', (event) => {
+//     location.reload();
+// })
 
 logout.addEventListener('click', (event) => {
     localStorage.removeItem('token');

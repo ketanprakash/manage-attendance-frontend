@@ -1,8 +1,9 @@
-// const url = "http://localhost:8000";
-const url = 'https://manageattendance.herokuapp.com';
+const url = "http://localhost:8000";
+// const url = 'https://manageattendance.herokuapp.com';
 const signinButton = document.querySelector('.signin-button');
 const emailField = document.querySelector('.email-field');
 const passwordField = document.querySelector('.password-field');
+const initialHeight = window.innerHeight;
 
 signinButton.addEventListener("click", (event) =>  {
     event.preventDefault();
@@ -30,3 +31,9 @@ signinButton.addEventListener("click", (event) =>  {
         });
     });
 })
+
+window.addEventListener('resize', (event) => {
+    document.documentElement.style.setProperty('overflow', 'auto')
+    const metaViewport = document.querySelector('meta[name=viewport]')
+    metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0');
+});

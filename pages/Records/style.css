@@ -192,3 +192,37 @@ a {
 .invisible{
     display: none;
 }
+
+@media only screen and (max-width: 600px){
+	body{
+		overflow-x: hidden;
+	}
+	.navbar{
+		height: 7vh;
+	}
+	.nav-header{
+		height: 7vh;
+	}
+	.logo{
+		height: 5vh;
+		padding: 2px;
+	}
+	.nav{
+		font-size: 10px;
+		padding: 10px;
+		height: 7vh;
+	}
+    .left{
+        height: 100vh;
+        width: 100vw;
+    }
+    .right{
+        height: 50vh;
+        width: 100vw;
+    }
+    .body{
+        height: 93vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

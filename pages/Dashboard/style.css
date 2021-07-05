@@ -197,3 +197,47 @@ a {
 .plus-image{
     height: 6vh;
 }
+
+@media only screen and (max-width: 600px){
+	body{
+		overflow-x: hidden;
+	}
+	.navbar{
+		height: 7vh;
+	}
+	.nav-header{
+		height: 7vh;
+	}
+	.logo{
+		height: 5vh;
+		padding: 2px;
+	}
+	.nav{
+		font-size: 10px;
+		padding: 10px;
+		height: 7vh;
+	}
+    .plus-image{
+        height: 3vh;
+    }
+    .nav-form-add{
+        height: 7vh;
+        width: 150px;
+        transform: translate(47px, 50px);
+    }
+    .add-subject-button{
+        font-size: 0.3em;
+        padding: 6px;
+    }
+    .subject-field{
+        padding: 4px;
+        width: 60%;
+        font-size: 0.5em;
+    }
+    .subject-container{
+        justify-content: center;
+    }
+    .body{
+        height: 93vh;
+    }
+}

@@ -20,6 +20,9 @@ a {
 	justify-content: space-between;
 	height: 10vh;
     border-bottom: solid rgb(121, 119, 119) 1px;
+	position: sticky; 
+	top: 0px;
+	background: white;
 }
 
 .nav-header{
@@ -70,7 +73,7 @@ a {
 	width: 50vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
@@ -87,24 +90,27 @@ a {
 
 .left .image img{
 	height: 50vh;
-	margin: 35px;
 }
 
 .right .image img{
-	height: 30vh;
-	margin: 35px;
-	padding-left: 45px;
+	height: 40vh;
 }
 
 .right .button{
 	text-decoration: none;
 }
 
+.button-container{
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
 .button{
 	font-weight: bold;
 	border-radius: 7px;
 	padding: 15px 30px;
-	margin: 20px;
 }
 
 .signup-button{
@@ -127,4 +133,32 @@ a {
 
 .signin-button:hover{
 	background-color: rgba(255, 255, 255, 0.850);
+}
+
+@media only screen and (max-width: 600px){
+	body{
+		overflow-x: hidden;
+	}
+	.navbar{
+		height: 7vh;
+	}
+	.nav-header{
+		height: 7vh;
+	}
+	.logo{
+		height: 5vh;
+		padding: 2px;
+	}
+	.left, .right{
+		width: 100vw;
+		height: 93vh;
+	}
+	.nav{
+		font-size: 10px;
+		padding: 10px;
+		height: 7vh;
+	}
+	.left{
+		font-size: 2em;
+	}
 }

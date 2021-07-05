@@ -1,10 +1,11 @@
-// const url = 'http://localhost:8000';
-const url = 'https://manageattendance.herokuapp.com';
+const url = 'http://localhost:8000';
+// const url = 'https://manageattendance.herokuapp.com';
 const navAdd = document.querySelector('.nav-add');
 const AddForm = document.querySelector('.nav-form-add');
 const AddSubjectButton = document.querySelector('.add-subject-button');
 const SubjectField = document.querySelector('.subject-field');
 const logout = document.querySelector('.nav-logout');
+const initialHeight = window.innerHeight;
 
 const loadSubjects = () => {
     fetch(`${url}/subjects/getsubjects`, {
@@ -101,3 +102,9 @@ logout.addEventListener('click', (event) => {
     localStorage.removeItem('token');
     location.href = "../../index.html";
 })
+
+window.addEventListener('resize', (event) => {
+    document.documentElement.style.setProperty('overflow', 'auto')
+    const metaViewport = document.querySelector('meta[name=viewport]')
+    metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0');
+});
