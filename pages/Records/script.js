@@ -55,7 +55,7 @@ const getRecords = () => {
                 
                 const card = document.createElement('div');
                 card.classList.add('attendance-card');
-                card.innerHTML = `<img class = "attendance-delete-image" src = "../../assets/Delete.png"/><br/>${element.date} <div id = ${element.id} class="attendance ${dayType}">${dayType}</div><img class = "edit-button" src="../../assets/edit-button.png">
+                card.innerHTML = `<img class = "attendance-delete-image" src = "../../assets/delete.png"/><br/>${element.date} <div id = ${element.id} class="attendance ${dayType}">${dayType}</div><img class = "edit-button" src="../../assets/edit-button.png">
                 <form class = "edit-attendance-form invisible">
                     <button class = "edit-attendance-button">Done</button>
                     <select class = "edit-attendance-options Present">
@@ -180,13 +180,13 @@ AddButton.addEventListener('click', (event) => {
 });
 
 const markAttendanceForm = document.querySelector('.mark-attendance-form');
-const attendanceOption = markAttendanceForm.querySelector('.attendance-option');
+const markAttendanceOption = markAttendanceForm.querySelector('.attendance-option');
 
-attendanceOption.addEventListener('change', (event) => {
-    attendanceOption.classList.remove('Present');
-    attendanceOption.classList.remove('Absent');
-    attendanceOption.classList.remove('Holiday');
-    attendanceOption.classList.add(attendanceOption.value);
+markAttendanceOption.addEventListener('change', (event) => {
+    markAttendanceOption.classList.remove('Present');
+    markAttendanceOption.classList.remove('Absent');
+    markAttendanceOption.classList.remove('Holiday');
+    markAttendanceOption.classList.add(attendanceOption.value);
 });
 
 const markAttendanceButton = document.querySelector('.mark-attendance-button');
@@ -229,22 +229,22 @@ markAttendanceButton.addEventListener('click', (event) => {
 
 const addAttendanceForm = document.querySelector('.add-attendance-form');
 const addAttendanceButton = document.querySelector('.add-attendance-button');
+const addAttendanceOption = addAttendanceForm.querySelector('.attendance-option');
+addAttendanceOption.addEventListener('change', (event) => {
+    addAttendanceOption.classList.remove('Present');
+    addAttendanceOption.classList.remove('Absent');
+    addAttendanceOption.classList.remove('Holiday');
+    addAttendanceOption.classList.add(addAttendanceOption.value);
+});
 addAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
     const dateField = addAttendanceForm.querySelector('.add-date-field');
-    const attendanceOption = addAttendanceForm.querySelector('.attendance-option');
-    attendanceOption.addEventListener('change', (event) => {
-        attendanceOption.classList.remove('Present');
-        attendanceOption.classList.remove('Absent');
-        attendanceOption.classList.remove('Holiday');
-        attendanceOption.classList.add(attendanceOption.value);
-    });
     let attendance, holiday;
-    if (attendanceOption.value === 'Present'){
+    if (addAttendanceOption.value === 'Present'){
         attendance = true;
         holiday = false;
     }
-    else if (attendanceOption.value === 'Absent'){
+    else if (addAttendanceOption.value === 'Absent'){
         attendance = false;
         holiday = false;
     }

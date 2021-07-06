@@ -168,7 +168,7 @@ body{
 
 .attendance-delete-image{
     height: 30px;
-    transform: translate(-95px);
+    transform: translate(-95px, 2px);
 }
 
 .attendance-delete-image:hover{
