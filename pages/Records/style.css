@@ -96,6 +96,7 @@ body{
 .mark-attendance-form{
     background: white;
     height: 250px;
+    min-height: 250px;
     width: 300px;
     border-radius: 15px;
     margin: 20px;
@@ -229,5 +230,15 @@ body{
         height: 93vh;
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .mark-attendance-form{
+        transform: scale(0.8);
+        margin: 0px;
+    }
+
+    .attendance-card{
+        transform: scale(0.8);
+        margin: 0px;
     }
 }

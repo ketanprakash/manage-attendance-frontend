@@ -26,7 +26,7 @@ const loadSubjects = () => {
                         subjectCard.classList.add('subject-card');
                         subjectCard.id = element.id;
                         subjectCard.innerHTML = `<div class="subject-heading"><a href="../../pages/Records/?subjectid=${element.id}">${element.name}</a></div>`
-                        subjectCard.innerHTML = `<div class = "subject-clickable"><div class="subject-heading"><a href="../../pages/Records/?subjectid=${element.id}">${element.name}</a></div></div><img src = "../../assets/Delete.png" class = "delete-image">`
+                        subjectCard.innerHTML = `<div class = "subject-clickable"><div class="subject-heading"><a href="../../pages/Records/?subjectid=${element.id}">${element.name}</a></div></div><img src = "../../assets/bin.svg" class = "delete-image">`
                         const deleteButton = subjectCard.querySelector('.delete-image');
                         const subjectClickable = subjectCard.querySelector('.subject-clickable');
                         subjectClickable.addEventListener('click', () => {
