@@ -66,11 +66,11 @@ a {
 }
 
 .nav-form-add{
-    /* position: absolute;
+    position: absolute;
     top: 9.5vh;
-    right: 425px; */
+    right: 425px;
     height: 10vh;
-    width: 300px; 
+    width: 250px; 
 	display: flex;
 	justify-content: center;
 	align-items: center;

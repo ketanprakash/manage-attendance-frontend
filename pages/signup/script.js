@@ -3,7 +3,7 @@ const url = 'https://manageattendance.herokuapp.com';
 const signupButton = document.querySelector('.signup-button');
 const firstnameField = document.querySelector('.firstname-field');
 const lastnameField = document.querySelector('.lastname-field');
-const emailField = document.querySelector('.email-field');
+const usernameField = document.querySelector('.username-field');
 const passwordField = document.querySelector('.password-field');
 const initialHeight = window.innerHeight;
 
@@ -13,7 +13,7 @@ signupButton.addEventListener("click", (event) =>  {
     const data = {
         firstname: firstnameField.value,
         lastname: lastnameField.value,
-        email: emailField.value,
+        username: usernameField.value,
         password: passwordField.value
     }
     fetch(`${url}/auth/signup`, {
