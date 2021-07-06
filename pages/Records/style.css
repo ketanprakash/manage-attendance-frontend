@@ -153,6 +153,7 @@ body{
     height: 300px;
     min-height: 300px;
     width: 300px;
+    max-width: 98%;
     border-radius: 15px;
     margin: 20px;
     text-align: center;
@@ -163,6 +164,16 @@ body{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+.attendance-delete-image{
+    height: 30px;
+    transform: translate(-95px);
+}
+
+.attendance-delete-image:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.200);
 }
 
 .add-date-field{
@@ -178,12 +189,12 @@ body{
     margin: 20px;
     text-align: center;
     font-size: 1.3em;
-    padding: 40px;
+    padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 
 .attendance{
-    transform: translate(70px, 20px);
+    transform: translate(100px, 15px);
     width: 120px;
     padding: 5px;
 }
@@ -202,8 +213,14 @@ body{
 }
 
 .edit-button{
-    transform: translate(-90px, -14px);
+    transform: translate(-94px, -17px);
     height: 30px;
+    padding: 2px;
+}
+
+.edit-button:hover{
+    background: rgba(0, 0, 0, 0.192);
+    padding: 2px;
 }
 
 .edit-button{
@@ -211,7 +228,7 @@ body{
 }
 
 .edit-attendance-options{
-    transform: translate(50px, -85px);
+    transform: translate(23px, -57px);
     font-size: 1em;
     border: 0px;
     outline: none;
@@ -221,7 +238,7 @@ body{
 }
 
 .edit-attendance-button{
-    transform: translate(-50px, -50px);
+    transform: translate(15px, -60px);
     padding: 8px;
     background:rgb(0, 38, 255);
     color: white;

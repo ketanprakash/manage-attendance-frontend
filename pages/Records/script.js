@@ -55,7 +55,7 @@ const getRecords = () => {
                 
                 const card = document.createElement('div');
                 card.classList.add('attendance-card');
-                card.innerHTML = `${element.date} <div id = ${element.id} class="attendance ${dayType}">${dayType}</div><img class = "edit-button" src="../../assets/edit-button.png">
+                card.innerHTML = `<img class = "attendance-delete-image" src = "../../assets/Delete.png"/><br/>${element.date} <div id = ${element.id} class="attendance ${dayType}">${dayType}</div><img class = "edit-button" src="../../assets/edit-button.png">
                 <form class = "edit-attendance-form invisible">
                     <button class = "edit-attendance-button">Done</button>
                     <select class = "edit-attendance-options Present">
@@ -121,10 +121,31 @@ const getRecords = () => {
                         })
                     })
                 });
-            });
-            if (CurrentDate === false){
-                form.classList.remove('invisible');
-            }
+                const deleteButton = card.querySelector('.attendance-delete-image');
+                deleteButton.addEventListener('click', (event) => {
+                    const data = {id: element.id};
+                    fetch(`${url}/attendance/deleteattendance/${subjectId}`, {
+                        method: "DELETE", 
+                        headers: {
+                            "content-type": "application/json",
+                            "authorization": localStorage.getItem('token')
+                        },
+                        body: JSON.stringify(data)
+                    }).then((res) => {
+                        res.json().then((resData) => {
+                            if (res.status != 200){
+                                alert(resData.message);
+                            }
+                            else {
+                                getRecords();
+                            }
+                        })
+                    });
+                });
+                if (CurrentDate === false){
+                    form.classList.remove('invisible');
+                }
+            })
             console.log(total);
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);
