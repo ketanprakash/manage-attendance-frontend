@@ -240,6 +240,7 @@ addAttendanceButton.addEventListener('click', (event) => {
         body: JSON.stringify(data)
     }).then((res) => res.json().then((data) => {
         if (res.status === 200){
+            addForm.classList.add('invisible');
             getRecords();
         }
         else{
