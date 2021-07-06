@@ -142,10 +142,10 @@ const getRecords = () => {
                         })
                     });
                 });
-                if (CurrentDate === false){
-                    form.classList.remove('invisible');
-                }
             })
+            if (CurrentDate === false){
+                form.classList.remove('invisible');
+            }
             console.log(total);
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);
