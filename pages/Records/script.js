@@ -186,18 +186,18 @@ markAttendanceOption.addEventListener('change', (event) => {
     markAttendanceOption.classList.remove('Present');
     markAttendanceOption.classList.remove('Absent');
     markAttendanceOption.classList.remove('Holiday');
-    markAttendanceOption.classList.add(attendanceOption.value);
+    markAttendanceOption.classList.add(markAttendanceOption.value);
 });
 
 const markAttendanceButton = document.querySelector('.mark-attendance-button');
 markAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
     let attendance, holiday;
-    if (attendanceOption.value === 'Present'){
+    if (markAttendanceOption.value === 'Present'){
         attendance = true;
         holiday = false;
     }
-    else if (attendanceOption.value === 'Absent'){
+    else if (markAttendanceOption.value === 'Absent'){
         attendance = false;
         holiday = false;
     }
