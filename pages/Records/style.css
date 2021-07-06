@@ -183,6 +183,7 @@ body{
 
 .attendance-card{
     background: white;
+    min-height: 130px;
     height: 130px;
     width: 240px;
     border-radius: 15px;

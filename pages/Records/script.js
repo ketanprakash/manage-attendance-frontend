@@ -233,7 +233,12 @@ addAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
     const dateField = addAttendanceForm.querySelector('.add-date-field');
     const attendanceOption = addAttendanceForm.querySelector('.attendance-option');
-    event.preventDefault();
+    attendanceOption.addEventListener('change', (event) => {
+        attendanceOption.classList.remove('Present');
+        attendanceOption.classList.remove('Absent');
+        attendanceOption.classList.remove('Holiday');
+        attendanceOption.classList.add(attendanceOption.value);
+    });
     let attendance, holiday;
     if (attendanceOption.value === 'Present'){
         attendance = true;
