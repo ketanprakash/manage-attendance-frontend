@@ -25,6 +25,20 @@
         </div>
         <div class="body">
             <div class="left">
+                <div class="add-attendance">
+                    <img class = "add-attendance-image" src = "../../assets/add-button.png">
+                    Custom Attendance
+                </div>
+                <form class="add-attendance-form invisible">
+                    Add Attendance
+                    <input type = "date" class = "add-date-field"/>
+                    <select class = "attendance-option Present"> 
+                        <option value = "Present">Present</option>
+                        <option value = "Absent">Absent</option>
+                        <option value = "Holiday">Holiday</option>
+                    </select>
+                    <button class = "add-attendance-button">Add</button>
+                </form>
                 <form class = "mark-attendance-form invisible"> 
                     Today's Attendance
                     <select class = "attendance-option Present"> 

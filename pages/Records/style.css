@@ -93,6 +93,23 @@ body{
     width: 60vw;
 }
 
+.add-attendance{
+    padding: 10px;
+    background: white;
+    display: flex;
+    width: 220px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.add-attendance-image{
+    height: 40px;
+}
+
 .mark-attendance-form{
     background: white;
     height: 250px;
@@ -107,7 +124,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 
 .attendance-option{
@@ -116,7 +133,7 @@ body{
     border-radius: 5px;
 }
 
-.mark-attendance-button{
+.mark-attendance-button, .add-attendance-button{
     padding: 10px 25px;
     background-color: rgb(0, 38, 255);
     color: white;
@@ -126,9 +143,31 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 
-.mark-attendance-button:hover{
+.mark-attendance-button:hover, .add-attendance-button:hover{
     cursor: pointer;
     background-color: rgb(0, 38, 255, 0.850);
+}
+
+.add-attendance-form{
+    background: white;
+    height: 300px;
+    min-height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+.add-date-field{
+    padding: 10px;
+    width: 200px;
 }
 
 .attendance-card{
@@ -240,5 +279,9 @@ body{
     .attendance-card{
         transform: scale(0.8);
         margin: 0px;
+    }
+
+    .add-attendance{
+        transform: scale(0.8);
     }
 }

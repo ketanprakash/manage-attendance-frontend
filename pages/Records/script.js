@@ -15,15 +15,6 @@ logout.addEventListener('click', (event) => {
 const params = new URLSearchParams(window.location.search); 
 const subjectId = params.get('subjectid');
 
-const attendanceOption = document.querySelector('.attendance-option');
-
-attendanceOption.addEventListener('change', (event) => {
-    attendanceOption.classList.remove('Present');
-    attendanceOption.classList.remove('Absent');
-    attendanceOption.classList.remove('Holiday');
-    attendanceOption.classList.add(attendanceOption.value);
-});
-
 const navRecords = document.querySelector(".nav-record");
 navRecords.addEventListener('click', (event) => {
     location.reload();
@@ -40,8 +31,12 @@ const getRecords = () => {
         if (res.status == 200){
             const {data, attendance, total, percentage} = attendanceData;
             const attendanceContainer = document.querySelector('.left');
+            const addAttendance = document.querySelector('.add-attendance');
+            const addForm = document.querySelector('.add-attendance-form');
             const form = document.querySelector('.mark-attendance-form');
             attendanceContainer.innerHTML = "";
+            attendanceContainer.appendChild(addAttendance);
+            attendanceContainer.appendChild(addForm);
             attendanceContainer.appendChild(form);
             const current_date = new Date();
             const date = `${current_date.getFullYear()}-${current_date.getMonth() + 1}-${current_date.getDate()}`;
@@ -157,6 +152,22 @@ const getRecords = () => {
 
 getRecords();
 
+const addForm = document.querySelector('.add-attendance-form');
+const AddButton = document.querySelector('.add-attendance');
+AddButton.addEventListener('click', (event) => {
+    addForm.classList.toggle('invisible');
+});
+
+const markAttendanceForm = document.querySelector('.mark-attendance-form');
+const attendanceOption = markAttendanceForm.querySelector('.attendance-option');
+
+attendanceOption.addEventListener('change', (event) => {
+    attendanceOption.classList.remove('Present');
+    attendanceOption.classList.remove('Absent');
+    attendanceOption.classList.remove('Holiday');
+    attendanceOption.classList.add(attendanceOption.value);
+});
+
 const markAttendanceButton = document.querySelector('.mark-attendance-button');
 markAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
@@ -179,6 +190,48 @@ markAttendanceButton.addEventListener('click', (event) => {
     };
     console.log(subjectId);
     fetch(`${url}/attendance/markattendance/${subjectId}`, {
+        method: "POST", 
+        headers: {
+            "content-type": "application/json",
+            "authorization": localStorage.getItem('token')
+        },
+        body: JSON.stringify(data)
+    }).then((res) => res.json().then((data) => {
+        if (res.status === 200){
+            getRecords();
+        }
+        else{
+            alert(data.message);
+        }
+    }))
+});
+
+const addAttendanceForm = document.querySelector('.add-attendance-form');
+const addAttendanceButton = document.querySelector('.add-attendance-button');
+addAttendanceButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    const dateField = addAttendanceForm.querySelector('.add-date-field');
+    const attendanceOption = addAttendanceForm.querySelector('.attendance-option');
+    event.preventDefault();
+    let attendance, holiday;
+    if (attendanceOption.value === 'Present'){
+        attendance = true;
+        holiday = false;
+    }
+    else if (attendanceOption.value === 'Absent'){
+        attendance = false;
+        holiday = false;
+    }
+    else {
+        attendance = false;
+        holiday = true;
+    }
+    const data = {
+        date: dateField.value,
+        holiday, 
+        attendance
+    };
+    fetch(`${url}/attendance/addattendance/${subjectId}`, {
         method: "POST", 
         headers: {
             "content-type": "application/json",
