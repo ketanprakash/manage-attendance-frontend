@@ -1,5 +1,5 @@
-// const url = 'http://localhost:8000';
-const url = 'https://manageattendance.herokuapp.com';
+const url = 'http://localhost:8000';
+// const url = 'https://manageattendance.herokuapp.com';
 const navHeading = document.querySelector('.heading');
 const logout = document.querySelector('.nav-logout');
 
@@ -144,9 +144,24 @@ const getRecords = () => {
                 });
             })
             if (CurrentDate === false){
-                form.classList.remove('invisible');
+                fetch(`${url}/timetable/gettimetable/${subjectId}`, {
+                    method: "GET", 
+                    headers: {
+                        "content-type": "application/json",
+                        "authorization": localStorage.getItem('token')
+                    },
+                }).then((res) => {
+                    const current_date = new Date();
+                    const day = current_date.getDay();
+                    res.json().then((days) => {
+                        days.forEach((row) => {
+                            if (row.day === day){
+                                form.classList.remove('invisible');
+                            }
+                        })
+                    })
+                })
             }
-            console.log(total);
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);
             function drawChart(){
