@@ -194,7 +194,7 @@ markAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
     let attendance, holiday, date;
     const current_date = new Date();
-    date = `${current_date.getFullYear}-${current_date.getMonth() + 1}-${current_date.getDate()}`;
+    date = `${current_date.getFullYear()}-${current_date.getMonth() + 1}-${current_date.getDate()}`;
     if (markAttendanceOption.value === 'Present'){
         attendance = true;
         holiday = false;
