@@ -220,12 +220,14 @@ a {
 }
 
 .time-table{
+    top: 190px;
+    left: 30px;
     background: white;
     padding: 10px;
-    width: 150px;
+    width: 130px;
     font-size: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
-    transform: translate(30px, -135px);
+    transform: translate(25px, -140px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
 .time-table input{
@@ -233,7 +235,7 @@ a {
 }
 
 .time-table-button{
-    width: 120px;
+    width: 100%;
     padding: 7px;
     margin: 2px;
     background: blue;
@@ -282,7 +284,7 @@ a {
         width: fit-content;
         top: 7.5vh;
         right: 85px;
-        z-index: 2;
+        z-index: 10;
         transform: scale(1.1);
     }
     .subject-add{
@@ -318,5 +320,8 @@ a {
     .subject-card{
         transform: scale(0.8);
         margin: 0px;
+    }
+    .time-table{
+        transform: translate(150px, -250px);
     }
 }
