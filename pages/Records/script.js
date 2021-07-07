@@ -192,7 +192,9 @@ markAttendanceOption.addEventListener('change', (event) => {
 const markAttendanceButton = document.querySelector('.mark-attendance-button');
 markAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
-    let attendance, holiday;
+    let attendance, holiday, date;
+    const current_date = new Date();
+    date = `${current_date.getFullYear}-${current_date.getMonth() + 1}-${current_date.getDate()}`;
     if (markAttendanceOption.value === 'Present'){
         attendance = true;
         holiday = false;
@@ -206,11 +208,12 @@ markAttendanceButton.addEventListener('click', (event) => {
         holiday = true;
     }
     const data = {
+        date,
         holiday, 
         attendance
     };
     console.log(subjectId);
-    fetch(`${url}/attendance/markattendance/${subjectId}`, {
+    fetch(`${url}/attendance/addattendance/${subjectId}`, {
         method: "POST", 
         headers: {
             "content-type": "application/json",
