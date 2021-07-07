@@ -302,4 +302,7 @@ body{
     .add-attendance{
         transform: scale(0.8);
     }
+    .add-attendance-form{
+        transform: scale(0.8);
+    }
 }
