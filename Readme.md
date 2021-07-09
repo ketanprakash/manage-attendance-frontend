@@ -70,15 +70,15 @@ npm start
 
 ## Frontend 
 1. Clone the [Github Repository](https://github.com/ketanprakash/manage-attendance-frontend)
-1. Comment out the following line in all script.js files
+2. Comment out the following line in all script.js files
 ```
 const url = 'https://manageattendance.herokuapp.com';
 ```
-1. Uncomment the following line in all script.js files
+3. Uncomment the following line in all script.js files
 ```
 const url = 'http://localhost:8000';
 ```
-1. Open the [index.html](./index.html) file.
+4. Open the [index.html](./index.html) file.
 
 # Team Members
 | Name | Roll Number |
