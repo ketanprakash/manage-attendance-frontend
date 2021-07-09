@@ -52,18 +52,18 @@ https://manage-attendance.netlify.app
 # Local Setup
 ## Backend
 1. Clone the [Github Repository](https://github.com/ketanprakash/manage-attendance-backend)
-1. Install the Node modules: 
+2. Install the Node modules: 
 ``` 
 npm install
 ```
-1. Set the following environment variables:
+3. Set the following environment variables:
     1. PGUSER(postgreSQL user name)
     1. PGHOST(postgreSQL host)
     1. PGDATABASE(postgreSQL Database)
     1. PGPASSWORD(postgreSQL Password)
     1. PGPORT(Port number of postgreSQL)
     1. SECRET_KEY(A random secret key)
-1. Start the backend server: 
+4. Start the backend server: 
 ```
 npm start
 ```
