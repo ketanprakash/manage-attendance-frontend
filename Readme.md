@@ -81,5 +81,6 @@ const url = 'http://localhost:8000';
 1. Open the [index.html](./index.html) file.
 
 # Team Members
-Name: Ketan Prakash
-Roll Number: 2020IMT-044
+| Name | Roll Number |
+| --- | ----------- |
+| Ketan Prakash | 2020IMT-044 |
