@@ -15,10 +15,18 @@ Attendance Manager and Tracker web application is made for students who want to 
 ## Subject Dashboard
 ![Dashboard](./assets/Screenshots/Dashboard.png)
 
+### Add Subject 
+![Add Subject](./assets/Screenshots/Add-Subject.png)
+
+### Set Time Table
+![Set Time Table](./assets/Screenshots/Set-Time-Table.png)
+
 ## Attendance Records
 
 ![Attendance Records](./assets/Screenshots/Records.png)
 
+### Mark Attendance
+![Mark Attendance](./assets/Screenshots/Mark-Attendance.png)
 
 # Hosted URL
 https://manage-attendance.netlify.app
@@ -84,3 +92,9 @@ const url = 'http://localhost:8000';
 | Name | Roll Number |
 | --- | ----------- |
 | Ketan Prakash | 2020IMT-044 |
+
+# Dummy credentials(for testing)
+
+Username: dummyuser
+
+Password: password
