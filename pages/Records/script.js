@@ -152,7 +152,10 @@ const getRecords = () => {
                     },
                 }).then((res) => {
                     const current_date = new Date();
-                    const day = current_date.getDay();
+                    let day = current_date.getDay();
+                    if (day == 0){
+                        day = 7;
+                    }
                     res.json().then((days) => {
                         days.forEach((row) => {
                             if (row.day === day){
