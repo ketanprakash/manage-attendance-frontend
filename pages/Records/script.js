@@ -42,20 +42,10 @@ const getRecords = () => {
             const date = `${current_date.getFullYear()}-${current_date.getMonth() + 1}-${current_date.getDate()}`;
             let CurrentDate = false;
             data.forEach(element => {
-                let dayType; 
-                if (element.holiday){
-                    dayType = "Holiday";
-                }
-                else if (element.attendance){
-                    dayType = "Present";
-                }
-                else {
-                    dayType = "Absent";
-                }
-                
                 const card = document.createElement('div');
+                console.log(element.date)
                 card.classList.add('attendance-card');
-                card.innerHTML = `<img class = "attendance-delete-image" src = "../../assets/delete.png"/><br/>${element.date} <div id = ${element.id} class="attendance ${dayType}">${dayType}</div><img class = "edit-button" src="../../assets/edit-button.png">
+                card.innerHTML = `<img class = "attendance-delete-image" src = "../../assets/delete.png"/><br/>${element.date} <div id = ${element.id} class="attendance ${element.attendance}">${element.attendance}</div><img class = "edit-button" src="../../assets/edit-button.png">
                 <form class = "edit-attendance-form invisible">
                     <button class = "edit-attendance-button">Done</button>
                     <select class = "edit-attendance-options Present">
@@ -73,11 +63,11 @@ const getRecords = () => {
                 const editAttendanceForm = card.querySelector('.edit-attendance-form');
                 const editAttendenceOptions = card.querySelector('.edit-attendance-options');
                 const editAttendanceButton = card.querySelector('.edit-attendance-button');
-                editAttendenceOptions.value = dayType;
+                editAttendenceOptions.value = element.attendance;
                 editAttendenceOptions.classList.remove("Holiday");
                 editAttendenceOptions.classList.remove("Present");
                 editAttendenceOptions.classList.remove("Absent");
-                editAttendenceOptions.classList.add(dayType);
+                editAttendenceOptions.classList.add(element.attendance);
                 editButton.addEventListener('click', (event) => {
                     editAttendanceForm.classList.toggle('invisible');
                 })
@@ -89,27 +79,14 @@ const getRecords = () => {
                 });
                 editAttendanceButton.addEventListener('click', (event) => {
                     event.preventDefault();
-                    let holiday, attendance;
-                    if (editAttendenceOptions.value == "Present"){
-                        holiday = false;
-                        attendance = true;
-                    }
-                    if (editAttendenceOptions.value == "Absent"){
-                        holiday = false;
-                        attendance = false;
-                    }
-                    if (editAttendenceOptions.value == "Holiday"){
-                        holiday = true;
-                        attendance = false;
-                    }
-                    console.log(holiday, attendance);
+                    console.log(editAttendenceOptions.value);
                     fetch(`${url}/attendance/editattendancedata/${subjectId}`, {
                         method: "PUT", 
                         headers: {
                             "content-type": "application/json",
                             "authorization": localStorage.getItem('token')
                         },
-                        body : JSON.stringify({id : element.id, holiday, attendance})
+                        body : JSON.stringify({id : element.id, attendance: editAttendenceOptions.value})
                     }).then((res) => {
                         res.json().then((resData) => {
                             if (res.status != 200){
@@ -210,25 +187,12 @@ markAttendanceOption.addEventListener('change', (event) => {
 const markAttendanceButton = document.querySelector('.mark-attendance-button');
 markAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
-    let attendance, holiday, date;
+    let date;
     const current_date = new Date();
     date = `${current_date.getFullYear()}-${current_date.getMonth() + 1}-${current_date.getDate()}`;
-    if (markAttendanceOption.value === 'Present'){
-        attendance = true;
-        holiday = false;
-    }
-    else if (markAttendanceOption.value === 'Absent'){
-        attendance = false;
-        holiday = false;
-    }
-    else {
-        attendance = false;
-        holiday = true;
-    }
     const data = {
         date,
-        holiday, 
-        attendance
+        attendance: markAttendanceOption.value
     };
     console.log(subjectId);
     fetch(`${url}/attendance/addattendance/${subjectId}`, {
@@ -260,23 +224,9 @@ addAttendanceOption.addEventListener('change', (event) => {
 addAttendanceButton.addEventListener('click', (event) => {
     event.preventDefault();
     const dateField = addAttendanceForm.querySelector('.add-date-field');
-    let attendance, holiday;
-    if (addAttendanceOption.value === 'Present'){
-        attendance = true;
-        holiday = false;
-    }
-    else if (addAttendanceOption.value === 'Absent'){
-        attendance = false;
-        holiday = false;
-    }
-    else {
-        attendance = false;
-        holiday = true;
-    }
     const data = {
         date: dateField.value,
-        holiday, 
-        attendance
+        attendance: addAttendanceOption.value
     };
     fetch(`${url}/attendance/addattendance/${subjectId}`, {
         method: "POST", 
