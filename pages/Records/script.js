@@ -168,7 +168,7 @@ const getRecords = async () => {
     }
 }
 
-getRecords().then();
+getRecords();
 
 const addForm = document.querySelector('.add-attendance-form');
 const AddButton = document.querySelector('.add-attendance');
